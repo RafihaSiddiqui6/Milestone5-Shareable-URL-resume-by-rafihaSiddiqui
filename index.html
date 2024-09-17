@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Path and Shareable Link Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Unique Path and Shareable Link - Resume Builder-Rafiha Siddiqui</h1>
+    </header>
+    <main>
+        <button id="toggleButton" class="toggle-btn"><em><strong>View</strong></em></button>
+        <form id="resumeForm" class="resume-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name here" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email here" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number here" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Qualification</legend>
+                <label for="qualification">Qualification:</label>
+                <textarea id="qualification" name="qualification" rows="4" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Experience</legend>
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="experience" rows="4" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills" placeholder="e.g. JavaScript, Python, CSS and other " rows="4" required></textarea>
+            </fieldset>
+
+            <button type="submit" class="submit-btn"><em><strong>Generate Resume</strong></em></button>
+        </form>
+        <div id="resumeOutput" class="resume-output" style="display: none;">
+            <button id="editResume" class="edit-btn"><em><strong>Edit Resume</strong></em></button>
+            <button id="downloadPDF" class="submit-btn"><em><strong>Download as PDF</strong></em></button>
+            <div id="shareableLink" style="display: none;">
+                <p><em><strong>Shareable resume URL</strong></em></p>
+                <input type="text" id="resumeURL" readonly>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
